@@ -8,6 +8,7 @@
 
 import pika
 
+
 connection = pika.BlockingConnection(
     pika.ConnectionParameters(
         '10.10.10.190',
@@ -15,6 +16,7 @@ connection = pika.BlockingConnection(
         credentials=pika.PlainCredentials('yuntao', '*********')
     )
 )
+
 
 channel = connection.channel()
 channel.basic_publish(
